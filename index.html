@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>البرمجة الزمنية لتلاميذ الثانية باك علوم - CPA</title>
+    <style>
+        /* التنسيق العام */
+        body {
+            font-family: 'Arial', sans-serif;
+            direction: rtl;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        /* التنسيق العام للعناصر */
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: #3498db;
+        }
+
+        a:hover {
+            color: #2980b9;
+        }
+
+        /* التنسيق الخاص بالصفحة */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #3498db, #2ecc71);
+            color: #fff;
+            padding: 80px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            font-size: 2.8rem;
+            margin: 0;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .header p {
+            font-size: 1.3rem;
+            margin: 10px 0 0;
+            animation: fadeIn 2.5s ease-in-out;
+        }
+
+        .section {
+            padding: 60px 0;
+        }
+
+        .section h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        .section p {
+            font-size: 1.1rem;
+            text-align: justify;
+            color: #555;
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .feature {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .feature h3 {
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .feature p {
+            font-size: 1rem;
+            color: #777;
+        }
+
+        .cta {
+            background: linear-gradient(135deg, #2ecc71, #3498db);
+            color: #fff;
+            padding: 80px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta h2 {
+            font-size: 2.2rem;
+            margin: 0 0 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .cta .btn {
+            background: #fff;
+            color: #2ecc71;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            transition: background 0.3s, color 0.3s;
+            animation: fadeIn 2.5s ease-in-out;
+        }
+
+        .cta .btn:hover {
+            background: #27ae60;
+            color: #fff;
+        }
+
+        .footer {
+            background: #2c3e50;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+
+        /* الرسوم المتحركة */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* التجاوب مع الأجهزة */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .header p {
+                font-size: 1rem;
+            }
+
+            .section h2 {
+                font-size: 1.8rem;
+            }
+
+            .section p {
+                font-size: 1rem;
+            }
+
+            .feature {
+                width: 100%;
+            }
+
+            .cta h2 {
+                font-size: 1.8rem;
+            }
+
+            .cta .btn {
+                font-size: 1rem;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- العنوان الرئيسي -->
+    <div class="header">
+        <div class="container">
+            <h1>البرمجة الزمنية لتلاميذ الثانية باك علوم</h1>
+            <p>خطط لوقتك بذكاء واجتياز الامتحانات بثقة!</p>
+        </div>
+    </div>
+
+    <!-- قسم الأهمية -->
+    <div class="section">
+        <div class="container">
+            <h2>لماذا البرمجة الزمنية مهمة لتلاميذ الثانية باك علوم؟</h2>
+            <p>
+                البرمجة الزمنية تساعدك على تنظيم وقتك بشكل فعال، مما يضمن تغطية جميع المواد قبل الامتحان. 
+                باتباع جدول زمني محكم، يمكنك تجنب التراكمات الأخيرة والاستعداد بشكل أفضل لامتحانات الباكالوريا.
+            </p>
+        </div>
+    </div>
+
+    <!-- قسم الميزات -->
+    <div class="section">
+        <div class="container">
+            <h2>ميزات البرمجة الزمنية</h2>
+            <div class="features">
+                <div class="feature">
+                    <h3>تنظيم الوقت</h3>
+                    <p>تساعدك على تقسيم وقتك بين المواد بشكل متوازن.</p>
+                </div>
+                <div class="feature">
+                    <h3>تقليل التوتر</h3>
+                    <p>التخطيط المسبق يقلل من الضغط النفسي قبل الامتحانات.</p>
+                </div>
+                <div class="feature">
+                    <h3>تحسين الأداء</h3>
+                    <p>تزيد من فرصك في تحقيق نتائج أفضل.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- قسم الدعوة للإجراء -->
+    <div class="cta">
+        <div class="container">
+            <h2>ابدأ رحلتك نحو النجاح!</h2>
+            <a href="https://appslocked.com/cl/i/5k1d63" class="btn">سجل الآن</a>
+        </div>
+    </div>
+
+    <!-- تذييل الصفحة -->
+    <div class="footer">
+        <div class="container">
+            <p>© 2023 CPA. جميع الحقوق محفوظة.</p>
+        </div>
+    </div>
+
+</body>
+</html>
