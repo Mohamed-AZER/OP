@@ -181,6 +181,11 @@
             color: white;
         }
         
+        .whatsapp-btn {
+            background: #25D366;
+            color: white;
+        }
+        
         .share-button:hover {
             transform: translateY(-3px);
             box-shadow: 0 5px 10px rgba(0,0,0,0.1);
@@ -229,6 +234,12 @@
             }
         }
     </style>
+    <!-- Open Graph Meta Tags for Better Social Sharing -->
+    <meta property="og:title" content="Affiliate Marketing Excellence - Free eBook">
+    <meta property="og:description" content="Get your free guide to master affiliate marketing strategies">
+    <meta property="og:image" content="https://freebook0.netlify.app/cover.jpg">
+    <meta property="og:url" content="https://freebook0.netlify.app/">
+    <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
     <div class="container">
@@ -274,6 +285,9 @@
                 <button class="share-button linkedin-btn" onclick="shareOnSocial('linkedin')">
                     <span>Share on LinkedIn</span>
                 </button>
+                <button class="share-button whatsapp-btn" onclick="shareOnSocial('whatsapp')">
+                    <span>Share on WhatsApp</span>
+                </button>
             </div>
             
             <div class="locked-content" id="lockedContent">
@@ -313,21 +327,26 @@
             unlockStatus.emailSubmitted = true;
         }
         
-        // Social sharing
+        // Social sharing with your specific URL
         function shareOnSocial(platform) {
+            const shareUrl = "https://freebook0.netlify.app/";
+            const shareText = "Just got this amazing FREE eBook 'Affiliate Marketing Excellence'! 🚀 Learn proven strategies to boost your affiliate earnings. Download yours now: ";
+            const hashtags = "AffiliateMarketing,MakeMoneyOnline,FreeEbook";
+            
             let url;
-            const shareText = "Just claimed my free 'Affiliate Marketing Excellence' eBook! Download yours here: ";
-            const shareUrl = https://freebook0.netlify.app/;
             
             switch(platform) {
                 case 'facebook':
                     url = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}&quote=${encodeURIComponent(shareText)}`;
                     break;
                 case 'twitter':
-                    url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText + shareUrl)}`;
+                    url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}&hashtags=${hashtags}`;
                     break;
                 case 'linkedin':
                     url = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`;
+                    break;
+                case 'whatsapp':
+                    url = `https://wa.me/?text=${encodeURIComponent(shareText + shareUrl)}`;
                     break;
                 default:
                     return;
@@ -335,11 +354,14 @@
             
             window.open(url, '_blank', 'width=600,height=400');
             
-            // In a real implementation, you'd verify the share via API
-            // For demo, we'll assume share was successful
+            // Track sharing (in a real implementation, you'd verify via API)
+            console.log(`Shared on ${platform}`);
+            unlockStatus.shared = true;
+            
+            // Complete unlock process after short delay
             setTimeout(() => {
                 completeUnlockProcess();
-            }, 2000);
+            }, 1500);
         }
         
         // Complete the unlock process
@@ -356,15 +378,18 @@
             // Here you would typically:
             // 1. Send download link to user's email
             // 2. Track conversion in analytics
-            // 3. Add user to your email sequence
             console.log('User unlocked content!');
+            
+            // Start download automatically (optional)
+            // setTimeout(() => {
+            //     document.querySelector('.download-btn').click();
+            // }, 2000);
         }
         
         // Bonus: Track if user tries to bypass
         document.addEventListener('DOMContentLoaded', () => {
             window.addEventListener('beforeunload', function(e) {
                 if (!unlockStatus.emailSubmitted) {
-                    // Notify if they try to leave without submitting
                     const confirmationMessage = 'Wait! Your free eBook is just 2 steps away.';
                     (e || window.event).returnValue = confirmationMessage;
                     return confirmationMessage;
@@ -374,3 +399,6 @@
     </script>
 </body>
 </html>
+            
+       
+       
